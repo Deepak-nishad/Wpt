@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  
+    <!-- <form action="" method="get">
+          <table>
+            <tr>
+                <td><label> UID : </label></td>
+                <td><input type="text" name="uid"></td>
+            </tr>
+         
+            <tr>
+                <td><label>PWD : </label></td>
+                <td><input type="password"></td>
+            </tr>
+        
+            <tr>
+                <td><button type="submit">Login</button></td>
+             <td>   <button type="reset">Clear</button></td>
+            </tr>
+    </table>
+    </form> -->
+<!-- 
+     <form>
+        Enter uid :
+        <input type="text" name="uid" 
+           list="names" required  pattern="^[a-z]{5,10}$" />
+        <br/>
+       Enter email :
+        <input type="email" name="emailid" maxlength="30" />
+        <br/>
+       
+      Enter birthdate :
+        <input type="date" name="bdate" min="2025-10-25" />
+        <br/>
+         Enter time :
+        <input type="time" name="time" />
+        <br/>
+         Enter color :
+        <input type="color" name="cl" />
+        <br/>
+        Enter month :
+        <input type="month" name="month" />
+        <br/>
+        Enter number :
+        <input type="number" name="no" min="10" max="99" step="5"/>
+        <br/> 
+        <input type="submit" value="SUBMIT" />
+    </form>
+    <datalist id="names">
+        <option>amit</option>
+        <option>vaibhav</option>
+        <option>snehal</option>
+        <option>pratik</option>
+    </datalist> -->
+
+    <h1> Registration Form </h1>
+    <form>
+         Enter UID : 
+        <input type="text" name="uid"/>
+        <br/>
+        <label> Enter gender : </label>
+        <input type="radio" name="gender" value="M"/> Male
+        <input type="radio" name="gender" value="F"/> Female
+        <br/>
+        <label> Select hobbies : </label>
+        <input type="checkbox" name="h1" /> Music
+        <input type="checkbox" name="h2" value="surfing"/> Surfing
+        <input type="checkbox" name="h3" value="drawing"/> Drawing
+        <input type="checkbox" name="h4" value="writing"/> Writing
+        <br/>
+        <label> Select city : </label>
+        <!-- <select name="city" size="3" multiple> -->
+        <select name="city" >
+            <option value="C01">Pune</option>
+            <option value="C09">Mumbai</option>
+            <option value="C18">Nagpur</option>
+            <option value="C45">Delhi</option>
+            <option value="C34">Chennai</option>
+        </select>
+        <br/>
+        <label> Enter you comment :</label>
+        <textarea rows="3" cols="50" name="comment">
+            Enter you comment here.......
+        </textarea>
+        <br/>
+        <input type="hidden" name="code" value="HHH!@#" />
+        <input type="button" value="Click Me" onclick="alert('hi')"/>
+        <input type="submit" value="Register" />
+        <input type="reset" value="CLEAR" />
+    </form>
+
+</body>
+
+</html>
