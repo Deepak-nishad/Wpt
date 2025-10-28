@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script src="first.js"></script>
+    <style>
+
+        #form-des  {
+            margin: 50px;
+            padding: 20px;
+            border: 2px solid black;
+            width: 300px;
+            background-color: red;
+        }
+        #checkPrime, #factorial {
+            
+            align-content: center;
+        }
+         #form-des2  {
+            margin: 50px;
+            padding: 20px;
+            border: 2px solid black;
+            width: 300px;
+            background-color: red;
+        }
+        #pow {
+            
+            align-content: center;
+        }
+    </style>
+  </head>
+  <body>
+
+    <form id="form-des">
+        <b>Enter Number</b>: <input type="number" name="num" />
+        <br>
+        <!-- <button type="button" onclick="checkPrime(num.value)">Check prime</button> -->
+        <button type="button" onclick="calCulateFact(num.value)">Factorial</button>
+         <span id="checkPrime"></span>
+    <span id="factorial"></span>
+    </form>
+
+    <form id="form-des2">
+        <b>Enter Number</b>: <input type="number" name="num" />
+        <b>Enter Number</b>: <input type="number" name="num1" />
+        <br>
+        <!-- <button type="button" onclick="checkPrime(num.value)">Check prime</button> -->
+        <button type="button" onclick="power(num.value)">CalculatePower</button>
+         <span id="pow"></span>
+   
+    </form>
+   
+    <!-- <script>
+      document.write("<h1>hello from JavaScript</h1>");
+
+      for (i = 1; i <= 5; i++) {
+        for (j = 1; j <= i; j++) {
+          document.write(j + " ");
+        }
+        document.write("<br>");
+      }
+
+
+      var a = 1;
+      if(a%2==0){
+        document.write("<h2>even number</h2>");
+      }
+      else{
+        document.write("<h2>odd number</h2>");
+      }
+
+
+
+    </script> -->
+
+  </body>
+</html>

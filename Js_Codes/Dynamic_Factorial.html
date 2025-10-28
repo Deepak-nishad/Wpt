@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    
+  </head>
+  <body>
+
+    <button type="button" onclick="dyfact()">generate factorial</button>
+    <div id="result"></div>
+    <script>
+    function dyfact() {
+     console.log("hello")
+
+        var str = "";
+        str += "<table border='1' style='background-color:red;'>";
+        for (i = 1; i <= 10; i++) {
+          fact = 1;
+          for (let j = 1; j <=i; j++) {
+            fact = fact * j;
+          }
+          str += "<tr>";
+          str += "<td>";
+          str += i + " = " + fact;
+          str += "</td>";
+          str += "</tr>";
+        }
+        str += "</table>";
+        console.log(str);
+        document.getElementById("result").innerHTML = str;
+      }
+    </script>
+  </body>
+</html>
