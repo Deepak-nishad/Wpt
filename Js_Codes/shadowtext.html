@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function shadow() {
+            console.log("mouse over")
+            document.getElementById("text").style.color = "black"
+            document.getElementById("text").style.textShadow = "2px 2px 4px #888888";
+
+        }
+        function shadow2() {
+            console.log("mouse out")
+            document.getElementById("text").style.color = "red"
+        }
+
+        function bacg1(element) {
+            console.log("button click")
+            document.body.style.backgroundColor = element.innerText;
+             btn=document.getElementById("first1");
+             btn.disabled=true;
+        }
+           
+        function bacg2(element) {
+            document.body.style.backgroundColor = element.innerText;
+              btn=document.getElementById("first2");
+             btn.disabled=true;
+        }
+        function bacg3(element) {
+            document.body.style.backgroundColor = element.innerText;
+              btn=document.getElementById("first3");
+             btn.disabled=true;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1 id="text" onmouseover="shadow()" onmouseout="shadow2()">Hello words</h1>
+
+    <button type="button" id="first1" onclick="bacg1(this)">red</button>
+    <button type="button" id="first2" onclick="bacg2(this)">blue</button>
+    <button type="button" id="first3" onclick="bacg3(this)">green</button>
+
+
+
+
+</body>
+
+</html>

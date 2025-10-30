@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style-type: none; /* removes default bullets */
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            background-color: #f2f2f2;
+            margin: 5px auto;
+            padding: 10px;
+            width: 200px;
+            border-radius: 8px;
+            text-align: left;
+        }
+        
+    </style>
+    <script>
+       
+        function  getText(){
+           let text=document.getElementById("depak1").value;
+
+            let ul=document.getElementById("ul")
+            let li= document.createElement("li")
+            li.textContent=text
+            ul.appendChild(li)
+          document.getElementById("depak1").value="";
+
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">My Todo List </h1>
+
+    <form action="" style="text-align: center;">
+
+        <input type="text" placeholder="enter the task" id="depak1" value="">
+           <button type="button" onclick="getText()"  >Add task</button>
+       <ul id="ul" ></ul>
+
+    </form>
+   
+
+</body>
+
+</html>
