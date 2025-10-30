@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function IsPrime() {
+            console.log("Button clicked")
+            flag = 0;
+            var i;
+            for (i = 10; i < 100; i++) {
+                if (i % 2 == 0) {
+                    flag = 1;
+                }
+                if (flag==1) {
+                    document.getElementById("newId").innerHTML=i;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="IsPrime()">Generate Prime</button>
+    <p id="newId">..</p>
+    
+</body>
+
+</html>

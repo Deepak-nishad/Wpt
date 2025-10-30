@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write("<b>heloo today task is String furnction and Date obj</b> ");
+        document.write("<br/> ");
+
+        var str = "welcome";
+        var name = "Amit";
+        // using backtick
+
+        var msg = `${str} ${name}`
+        document.write(msg);
+
+        document.write("<br/> ");
+        for (i = 0; i < str.length; i++)
+            document.write("charAt function  :- " + str.charCodeAt(i) + " <br/>");
+
+        document.write("<br/> ");
+
+        for (i = 0; i < str.length; i++)
+            document.write("charAt function :- " + str.charAt(i) + " <br/>");
+        document.write("<br/> ");
+
+        document.write("indexof() function for string " + str.indexOf("c"));
+        document.write("<br/> ");
+
+        document.write("lastindexof() function for  string " + str.indexOf("o"));
+        document.write("<br/> ");
+        // it aceept negative value also
+        document.write("String slice function :-  " + str.slice(-5)+ "  (With index -5 neg val )");
+         document.write("<br/> ");
+        document.write("String slice function :-  " + str.slice(1)+ "  ( With index 1)" );
+       document.write("<br/> ");
+        document.write("substr() function on welcome string  with starting index 0 and length 3 "+str.substr(0,3));
+
+document.write("<br/> ");
+//         str="this is a statement";
+// words=str.split("a");
+// document.write(words);
+
+str.toLowerCase();
+document.writeln(str.toUpperCase());
+
+
+
+    </script>
+</body>
+
+</html>

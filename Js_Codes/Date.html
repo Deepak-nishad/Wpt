@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    document.write("Date object " +"<br/>")
+
+
+    var cdate=new Date();
+    document.write("<br/>")
+    console.log(cdate);
+       document.write("Date is "+cdate +"<br/>")
+       document.write("Day is "+ cdate.getDate());
+          document.write("<br/>")
+       document.write("Month is "+ cdate.getMonth());
+          document.write("<br/>")
+       document.write("Day is "+ cdate.getFullYear());
+
+          document.write("<br/>")
+
+    var user=new Date(1999, 5 ,22);
+    document.write("My birthday is ====> "+cdate);
+       document.write("<br/>")
+    var age= cdate.getFullYear()-user.getFullYear();
+
+    document.write("My age is "+age);
+
+
+
+
+
+</script>
+
+</body>
+</html>
