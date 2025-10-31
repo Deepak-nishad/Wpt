@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+          <script src="jquery-3.7.1.min.js" ></script>
+         <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                //$("div").fadeTo(4000,0.3);
+                $("table").fadeToggle(3000);
+            })
+
+            $("img").mouseup(function() {
+                $(this).fadeIn(4000);
+                
+            })
+             $("img").mousedown(function() {
+              $(this).fadeToggle(3000);
+                
+            })
+        })
+
+        
+    </script>
+    </head>
+    <body>
+        <button type="button" style="float: right; height: 30px; width: 100px; background-color: azure;"> click to fade</button>
+        <table border="1">
+            <tr>
+                <td><img src="./images/browesr.jpg"  height="200" width="200"/></td>
+                <td><img src="./images/Computer.jpg" height="200" width="200" /></td>
+                <td><img src="./images/Desert.jpeg" height="200" width="200"/></td>
+            </tr>
+            <tr>
+               <td><img src="./images/browesr.jpg" height="200" width="200"/></td>
+                <td><img src="./images/Computer.jpg" height="200" width="200"/></td>
+                <td><img src="./images/Desert.jpeg" height="200" width="200"/></td>
+            </tr>
+            <tr>
+               <td><img src="./images/browesr.jpg" height="200" width="200" /></td>
+                <td><img src="./images/Computer.jpg" height="200" width="200"/></td>
+                <td><img src="./images/Desert.jpeg" height="200" width="200"/></td>
+            </tr>
+        </table>
+    </body>
+</html>

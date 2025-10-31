@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+       $(document).ready(function () {
+
+            $("h3.active").click(function () {
+                // Close all open paragraphs
+                $(".accordion p").slideUp(1000);
+
+                // If the clicked header's next paragraph is already visible, don't open it again
+                if (!$(this).next().is(":visible")) {
+                    $(this).next().slideDown(1000);
+                }
+            });
+
+        });
+    </script>
+
+    <style>
+        body {
+            width: 570px;
+        }
+
+        h3.active {
+            background: #e9e7e7 url("images/down.png") no-repeat right -51px;
+        }
+
+        h3 {
+            background: #e9e7e7 url("images/up.png") no-repeat right 5px;
+        }
+
+        .accordion p {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="accordion">
+        <h3 class="active">Question One Sample Text</h3>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi
+            malesuada, ante at feugiat tincidunt, enim massa gravida metus,
+            commodo lacinia massa diam vel eros. Proin eget urna. Nunc
+            fringilla neque vitae odio. Vivamus vitae ligula.
+        </p>
+
+        <h3 class="active">This is Question Two</h3>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi
+            malesuada, ante at feugiat tincidunt, enim massa gravida metus,
+            commodo lacinia massa diam vel eros. Proin eget urna. Nunc
+            fringilla neque vitae odio. Vivamus vitae ligula.
+        </p>
+
+        <h3 class="active">Another Questio here</h3>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi
+            malesuada, ante at feugiat tincidunt, enim massa gravida metus,
+            commodo lacinia massa diam vel eros. Proin eget urna. Nunc
+            fringilla neque vitae odio. Vivamus vitae ligula.
+        </p>
+
+        <h3 class="active">Sample heading</h3>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi
+            malesuada, ante at feugiat tincidunt, enim massa gravida metus,
+            commodo lacinia massa diam vel eros. Proin eget urna. Nunc
+            fringilla neque vitae odio. Vivamus vitae ligula.
+        </p>
+
+        <h3 class="active">Sample Question Heading</h3>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi
+            malesuada, ante at feugiat tincidunt, enim massa gravida metus,
+            commodo lacinia massa diam vel eros. Proin eget urna. Nunc
+            fringilla neque vitae odio. Vivamus vitae ligula.
+        </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+          <script src="jquery-3.7.1.min.js" ></script>
+         <script>
+        $(document).ready(function() {
+
+             $("a.open").click(function() {
+                //$("#details").slideDown(4000);
+                $(this).next().slideDown(3000);
+            })
+            $("a.close").click(function() {
+                //$("#details").slideUp(4000);
+                $(this).prev().find(".container").slideUp(2000);
+            })
+            
+        })
+    </script>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <!-- Iphone <a href="#" class="open">View specifications</a> -->
+                  <!-- <div style="display: none"></div> -->
+                <div style="display: block">
+                    <ul>
+                        <img src="/images/neil-soni-6wdRuK7bVTE-unsplash.jpg" alt="mobile" height="400px" width="300px">
+                        <br>
+                           Iphone <a href="#" class="open">View specifications</a>
+                     <div class="container" style="display: none;">
+                           <li>Iphone 17 pro max</li>
+                        <li>120hz refrash rate</li>
+                        <li>50 MP tripple camera</li>
+                     </div>
+
+                    </ul>
+                    <a href="#" class="close">Close</a>
+                    <br>
+                </div>
+            </li>
+            <li>
+                <!-- Moto <a href="#" class="open">View specifications</a> -->
+                <!-- <div style="display: none"> -->
+                      <div style="display: block"></div>
+                    <ul>
+                        <img src="/images/paolo-giubilato-ZwKCWVFdrcs-unsplash.jpg" height="400px" width="300px" alt="mobile">
+                        <br>
+                           Iphone <a href="#" class="open">View specifications</a>
+                        <li>Moto edge 60 fusion</li>
+                        <li>120hz refrash rate</li>
+                        <li>50 MP camera</li>
+                    </ul>
+                    <a href="#" class="close">Close</a>
+                </div>
+            </li>
+        </ul>
+    </body>
+</html>

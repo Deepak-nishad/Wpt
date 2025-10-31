@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("#hide").click(function () {
+
+                $("img").hide(2000, function () {
+                    alert("hiding effect compled")
+                })
+            })
+            $("#show").click(function () {
+
+                $("img").show(2000, function () {
+                    alert("showing effect compled")
+                })
+            })
+
+            $("#togle").click(function () {
+                console.log("function clicked")
+                $("img").toggle(
+                    alert("showing effect compled")
+                )
+            })
+
+        })
+
+    </script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img src="images/Desert.jpeg" alt="desert" height="200px" width="200px">
+    <br>
+    <button type="button" id="hide">Hide</button>
+    <button type="button" id="show">show</button>
+    <button type="button" id="togle">toggle</button>
+
+</body>
+
+</html>
