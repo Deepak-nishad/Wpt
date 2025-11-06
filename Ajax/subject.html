@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function trySumthing(obj) {
+            // console.log(obj);
+            dee = obj.id;
+            // console.log(dee)
+            fetch('http://localhost:9000/getQuestions/?catid=' + dee)
+                .then(response => {
+                    // Check if the request was successful (e.g., status code 200)
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    // Parse the response body as JSON
+                    return response.json();
+                })
+                .then(data => {
+                    // Work with the fetched data
+                    console.log(data);
+
+                    var str = "";
+
+                    str += "<table border='2'>"
+                    for (i = 1; i < data.length; i++) {
+
+                        str += "<tr>"
+                        str += "<td>" + data[i].qid + "</td>"
+                        str += "<td>" + data[i].qtext + "</td>"
+                        str += "<td>" + data[i].opt1 + "</td>"
+                        str += "<td>" + data[i].opt2 + "</td>"
+                        str += "<td>" + data[i].opt3 + "</td>"
+                        str += "<td>" + data[i].opt4 + "</td>"
+
+                        str += "</tr>"
+
+                    }
+                    str += "</table>"
+
+                    document.getElementById("empArea").innerHTML = str;
+
+
+
+                })
+                .catch(error => {
+                    // Handle any errors during the fetch operation
+                    console.error('Fetch error:', error);
+                });
+        }
+     </script>
+</head>
+
+<body>
+    <!-- <button type="button" onclick="trySumthing()">GetQuestion</button><br> -->
+
+    <a href="#" id="1" onclick="trySumthing(this)">c++</a><br>
+
+    <a href="#" id="2" onclick="trySumthing(this)">c programming</a><br>
+    <a href="#" id="3" onclick="trySumthing(this)">Core java</a>
+    <div id="empArea"></div>
+</body>
+
+</html>

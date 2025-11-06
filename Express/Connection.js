@@ -1,10 +1,7 @@
 var mysql = require("mysql2");
-var exp = require("express"); 
-console.log(exp)//expose one single function
+var exp = require("express");
 
-//app - web application - web server
 var app = exp();
-console.log(app);
 
 app.listen(9000, function () {
   console.log("exp server started at 9000");
@@ -17,7 +14,6 @@ var con = mysql.createConnection({
   database: "Assignments_knowit",
 });
 
-
 con.connect(function (err) {
   if (!err) {
     console.log("Data base connected");
@@ -26,17 +22,30 @@ con.connect(function (err) {
   }
 });
 
-app.get(('/getemps'), function (req, res) {
-    con.query("Select * from emp", function (err, result) {
-      if (!err) {
-        result.forEach((v) => {
-          res.write("<p>" + v.ENAME +" <------->"+v.JOB +"</p>");
-        });
-        res.end();
-      }
-      else{
-        res.send(err);
-      }
-    });
-  });
 
+app.get("/getemps", function (req, res) {
+  con.query("Select * from emp", function (err, result) {
+    if (!err) {
+     str = "<table border=1>";
+      result.forEach((v) => {
+        str += "<tr>";
+        str += "<td>" + v.EMPNO + "</td>";
+        str += "<td>" + v.ENAME + "</td>";
+        str += "</tr>";
+      });
+      str += "</table>";
+       res.send(str)
+
+
+      // result.forEach((v) => {
+      //   res.write("<p>"+v.EMPNO+ "  "+ v.ENAME +"</p>");
+        
+      // });
+  
+
+      res.end();
+    } else {
+      res.send(err);
+    }
+  });
+});

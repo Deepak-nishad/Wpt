@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+
+             empjson = `{
+"empid": 1001,
+"name": "Deepak",
+"salary" : 100000,
+"deptno" : 20,
+"ismgr":true,
+"constactnumbers":[985636335, 8295419825]
+}`;
+
+        function getEmpFromJson(){
+          
+            var str="";
+            var data=JSON.parse(empjson)
+            console.log(data);
+          
+             str+="<table border='2'>"
+                str+="<tr>"
+                    str+="<td>"+ data.empid +"</td>"
+                     str+="<td>"+ data.name +"</td>"
+                      str+="<td>"+ data.salary +"</td>"
+                       str+="<td>"+ data.deptno +"</td>"
+                        str+="<td>"+ data.ismgr +"</td>"
+                         str+="<td>"+ data.constactnumbers[0] +"</td>"
+                            str+="<td>"+ data.constactnumbers[1] +"</td>"
+                    str+="</tr>"
+            str+="</table>"
+        
+            document.getElementById("empArea").innerHTML=str;
+           
+        }
+  
+    </script>
+  </head>
+
+  <body onload="getEmpFromJson()">
+
+     <!-- <button type="button" onclick="getEmpFromJson()">getEmpFromJson</button> -->
+    <div id="empArea"></div> 
+
+  </body>
+</html>
