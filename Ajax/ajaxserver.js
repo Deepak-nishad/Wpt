@@ -1,9 +1,10 @@
 var exp = require('express');
 var mysql = require('mysql2');
-
+var cors = require('cors')
 var app = exp();
 
 app.use(exp.static("scripts"));
+app.use(cors())
 
 app.listen(9000, function(req,res) {
    console.log("exp server - all");
