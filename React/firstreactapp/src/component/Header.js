@@ -3,8 +3,8 @@
     return (
 
         <>
-        <h3>Date and time is : {new Date().toDateString()}</h3>
-        <h4>Date and time is : {new Date().toString()}</h4>
+        <p className="text-primary">Date and time is : {new Date().toDateString()}</p>
+        <h4 className="text-primary">Date and time is : {new Date().toString()}</h4>
         </>
     )
 }
