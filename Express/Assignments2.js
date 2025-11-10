@@ -1,12 +1,15 @@
 var exp = require("express");
 var mysql = require("mysql2");
 var bp = require("body-parser");
+var cors = require("cors");
 // console.log(bp);
 
 var app = exp();
-
+app.use(exp.json())
 app.use(exp.static("pics"));
 app.use(bp.urlencoded({ extended: false }));
+app.use(cors());
+// app.use(exp.urlencoded({extended:true}))
 
 app.listen(9000, function (req, res) {
   console.log("server startrd");
@@ -16,7 +19,7 @@ var con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "Deepak@123",
-  database: "shoppingdb",
+  database: "assignments_knowit",
 });
 
 con.connect(function (err) {
@@ -81,20 +84,28 @@ app.post("/logincheckwithdb", function (req, res) {
 });
 
 app.post("/registerindb", function (req, res) {
-  var fname = req.body.firstName;
-  var lname = req.body.lastName;
-  var email = req.body.email;
-  var pass = req.body.password;
-  var unumber = req.body.mobileNumber;
+  console.log("In register db")
+  var empid = req.body.empid;
+var ename=req.body.ename;
+var job=req.body.job;
+var mgr=req.body.mgr;
+var sal=req.body.sal;
+var comm=req.body.comm;
+var deptno=req.body.deptno;
+var hirdate=req.body.hirdate;
+ 
 
-  console.log(fname + " " + lname + " " + email + " " + pass + " " + unumber);
+console.log(empid+" "+ ename+ " "+ job+" "+ mgr+ " "+sal+" "+comm+" "+ deptno);
 
-  var sqlquery = `INSERT INTO users (u_id, password, fname,mname, lname, email, contact) VALUES (?, ?, ?, ?,?, ?,?)`;
-  var values = [fname, pass, fname,fname, lname, email, unumber]; // make sure these variables are defined
+
+  var sqlquery = `INSERT INTO emp (EMPNO, ENAME, JOB, MGR, SAL, COMM, DEPTNO, HIREDATE) VALUES (?, ?, ?, ?,?, ?,?,?)`;
+  var values = [empid, ename, job,mgr, sal, comm, deptno, hirdate]; // make sure these variables are defined
 
   con.query(sqlquery, values, function (err) {
     if (!err) {
-      console.log("Data submitted");
+      // console.log("Data submitted");
+      // res.send("Data submitted");
+        res.send("Data submitted");
     } else {
       console.log("Error: ", err);
     }

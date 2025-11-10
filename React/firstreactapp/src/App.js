@@ -1,7 +1,8 @@
 
 import './App.css';
-import EmpForm from './component/EmpForm';
-import RegisterForm from './component/RegisterForm';
+import EmpRegisteration from './component/EmpRegisteration';
+// import EmpForm from './component/EmpForm';
+// import RegisterForm from './component/RegisterForm';
 // import ShowForm from './component/Showform';
 
 // import Header from './component/Header';
@@ -34,7 +35,8 @@ function App() {
 {/* <RegisterForm/> */}
 
 
-<EmpForm/>
+{/* <EmpForm/> */}
+<EmpRegisteration/>
 
     </>
   );
